@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ray Sam</title>
+
+    <!-------------CSS ------------------>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/image.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <style>
+        /* Popup container - can be anything you want */
+        .popup {
+          position: relative;
+          display: inline-block;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        
+        /* The actual popup */
+        .popup .popuptext {
+          visibility: hidden;
+          width: 160px;
+          background-color: #555;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 8px 0;
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -80px;
+        }
+        
+        /* Popup arrow */
+        .popup .popuptext::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          margin-left: -5px;
+          border-width: 5px;
+          border-style: solid;
+          border-color: #555 transparent transparent transparent;
+        }
+        
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+          visibility: visible;
+          -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+        }
+        
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+          from {opacity: 0;} 
+          to {opacity: 1;}
+        }
+        
+        @keyframes fadeIn {
+          from {opacity: 0;}
+          to {opacity:1 ;}
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="container">
+
+            <a href="#" class="logo">Portf<span>olio.</span></a>
+
+            <div class="links">
+
+                <ul>
+                    <li>
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
+                <i class="uil uil-moon toggle-btn"></i>
+            
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="showcase-area" id="home">
+            <div class="container">
+                <div class="showcase-info">
+
+                    <h3 class="sub-heading">Nanyang Technological University</h3>
+                    <h1 class="heading">Goh Ray Sam</h1>
+                    <p class="text">An individual who is passionate about big data and a self-driven learner<br> who 
+                    is seeking out new challenges and opportunities in this exciting field.</p>
+                    
+                    <div class="cta">
+                        <a href="https://www.linkedin.com/in/goh-ray-sam-7982a91b6" class="btn">Contact me via Linkedin</a>
+                        <a href="#about" download class="btn secondary-btn">Read More</a>
+                    </div>
+
+                </div>
+
+                <div class="showcase-image">
+                    <img src="./assets/abc.jpeg" class="person" alt="image">
+                </div>
+            
+            </div>
+        </section>
+
+        <section class="skills section" id="about">
+
+            <div class="modal">
+                <div class="modal-overlay">
+                    <div class="slider-wrap">
+                        <div class="prev-btn navigation">
+                            <i class="uil uil-angle-left-b"></i>
+                        </div>
+                        <div class="images">
+                            <img class="showImage" src="./assets/ITWeb2.jpeg" alt="">
+                            <img src="./assets/TourWeb2.jpeg" alt="">
+                            <img src="./assets/MiniRes.jpeg" alt="">
+                            <img src="./assets/mobileapp1.jpeg" alt="">
+                            <img src="./assets/studentSystem.jpeg" alt="">
+                        </div>
+                        <div class="next-btn navigation">
+                            <i class="uil uil-angle-right-b"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="container">
+                <div class="skills-box">
+
+                    <div class="box-heading">
+                        <h3 class="sub-heading">Introduction</h3>
+                    </div>
+
+                    <div class="skills-wrap">
+                        <h1 class="heading">About Me</h1>
+                    </div>
+
+                    <div class="box-desc">
+                        <p class="text">
+                            Third-year student in Nanyang Business School pursuing a Business degree specialising in Business Analytics.
+                            This website will showcase the various projects that I have worked on in school.
+                                           
+                           <br><br>
+                           <span style="font-weight: 500;">
+                            SKILLS: Programming Languages (Python, R), Query Languages (MySQL, MongoDB), Data Visualisation (PowerBI, Tableau), Microsoft Office
+                            </span>
+                        </p>
+                    </div>
+
+                    <br>
+
+                    <section id="portfolio">
+                        <div class="portfolio-header">
+
+                            <div>
+                                <h2 class="sub-heading1">Below are the few projects that I have
+                                    worked on
+                                </h2>
+                            </div>
+
+                            <div class="filter-btns">
+                                <button class="filter-btn" data-filter="all">All</button>
+                                <button class="filter-btn" data-filter=".javascript">Programming</button>
+                                <button class="filter-btn" data-filter=".java">Query</button>
+                                <button class="filter-btn" data-filter=".mobile">Data Visualisation</button>
+                            </div>   
+
+                        </div>
+
+                        <div class="portfolio-gallery">
+
+                            <div class="mix prt-card javascript">
+                                <div class="prt-image">
+                                    <div class="img">
+                                        <img src="./assets/ITWeb2.jpeg" alt="">
+
+                                        <div class="prt-overlay">
+                                            <span class="prt-icon zoom-icon" style="--i: 0s">
+                                                <i class="uil uil-search-plus"></i>
+                                            </span>
+
+                                            <span class="prt-icon" style="--i: 0.15s">
+                                                <div class="popup" onclick="itStore()">
+                                                    <i class="uil uil-ellipsis-h" ></i>
+                                                    <span class="popuptext" id="itStore" style="font-size: 10px;">
+                                                        Interactive Applications done using
+                                                        <span style="color: rgb(120, 214, 183);">
+                                                            Python and R.
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </span>
+                                           
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="prt-desc">
+                                    <h3>Python Project</h3>
+                                    <a href="#viewmore" class="btn secondary-btn sm">See More</a>
+                                </div>
+                            </div>
+
+                            <div class="mix prt-card java">
+                                <div class="prt-image">
+                                    <div class="img">
+                                        <img src="./assets/TourWeb2.jpeg" alt="">
+
+                                        <div class="prt-overlay">
+                                            <span class="prt-icon zoom-icon" style="--i: 0s">
+                                                <i class="uil uil-search-plus"></i>
+                                            </span>
+                                                            
+                                            <span class="prt-icon" style="--i: 0.15s">
+                                                <div class="popup" onclick="tourWeb()">
+                                                    <i class="uil uil-ellipsis-h" ></i>
+                                                    <span class="popuptext" id="tourWeb" style="font-size: 10px;">
+                                                        A Project that uses Various 
+                                                    <span style="color: rgb(120, 214, 183);"> 
+                                                            SQL Queries. 
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </span>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="prt-desc">
+                                    <h3>SQL Project</h3>
+                                    <a href="#viewmore" class="btn secondary-btn sm">See More</a>
+                                </div>
+                            </div>
+
+                            <div class="mix prt-card javascript">
+                                <div class="prt-image">
+                                    <div class="img">
+                                        <img src="./assets/MiniRes.jpeg" alt="">
+
+                                        <div class="prt-overlay">
+                                            <span class="prt-icon zoom-icon" style="--i: 0s">
+                                                <i class="uil uil-search-plus"></i>
+                                            </span>
+
+                                            <span class="prt-icon" style="--i: 0.15s">
+                                                <div class="popup" onclick="miniJavascript()">
+                                                    <i class="uil uil-ellipsis-h" ></i>
+                                                    <span class="popuptext" id="miniJavascript" style="font-size: 10px;">
+                                                        A Machine Learning Project done using 
+                                                        <span style="color: rgb(120, 214, 183);">
+                                                            Python.
+                                                        </span>
+                                                        
+                                                    </span>
+                                                </div>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="prt-desc">
+                                    <h3>Machine Learning</h3>
+                                    <a href="#viewmore" class="btn secondary-btn sm">See More</a>
+                                </div>
+                            </div>
+
+                            <div class="mix prt-card mobile">
+                                <div class="prt-image">
+                                    <div class="img">
+                                        <img src="./assets/mobileapp1.jpeg" alt="">
+
+                                        <div class="prt-overlay">
+                                            <span class="prt-icon zoom-icon" style="--i: 0s">
+                                                <i class="uil uil-search-plus"></i>
+                                            </span>
+
+                                            <span class="prt-icon" style="--i: 0.15s">
+                                                <div class="popup" onclick="toDoApp()">
+                                                    <i class="uil uil-ellipsis-h" ></i>
+                                                    <span class="popuptext" id="toDoApp" style="font-size: 10px;">
+                                                        An Interactive Dashboard done using
+                                                        <span style="color: rgb(120, 214, 183);">
+                                                        Tableau.
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="prt-desc">
+                                    <h3>Tableau Dashboard</h3>
+                                    <a href="#viewmore" class="btn secondary-btn sm">See More</a>
+                                </div>
+                            </div>
+
+                            <div class="mix prt-card java">
+                                <div class="prt-image">
+                                    <div class="img">
+                                        <img src="./assets/studentSystem.jpeg" alt="">
+
+                                        <div class="prt-overlay">
+                                            <span class="prt-icon zoom-icon" style="--i: 0s">
+                                                <i class="uil uil-search-plus"></i>
+                                            </span>
+
+                                            <span class="prt-icon" style="--i: 0.15s">
+                                                <div class="popup" onclick="studentSys()">
+                                                    <i class="uil uil-ellipsis-h" ></i>
+                                                    <span class="popuptext" id="studentSys" style="font-size: 10px;">
+                                                        A Project that uses Various 
+                                                        <span style="color: rgb(120, 214, 183);">         
+                                                        NOSQL Queries
+                                                        </span>
+                                                    </span>
+                                                </div>    
+                                            </span>                                                                       
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="prt-desc">
+                                    <h3>MongoDB Project</h3>
+                                    <a href="#viewmore" class="btn secondary-btn sm">See More</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        
+        <section class="imageSlider section" id ="viewmore">
+
+            <div class="skills-wrap">
+                <h1 class="heading">Snapshots of my Projects</h1>
+                <p>Click one to view!</p>
+                <i class="uil uil-arrow-down"></i>
+            </div>
+
+            <div class="filter-btns" id="alphabet">
+
+                <button id="first" class="filter-btn" data-filter="first">Python Project</button>
+                <button id="second" class="filter-btn" data-filter="second">SQL Project</button>
+                <button id="third" class="filter-btn" data-filter="third">Machine Learning</button>
+                <button id="fourth" class="filter-btn" data-filter="fourth">Tableau Dashboard</button>
+                <button id="fifth" class="filter-btn" data-filter="fifth">MongoDB Project</button>
+            </div>   
+
+            <script>
+                 window.onload = myMain;
+
+                function myMain() {
+                     document.getElementById("alphabet").onclick = buton;
+                }
+
+                function buton(e) {
+                    if (e.target.tagName == 'BUTTON') {
+
+                        if(e.target.id === "first"){
+
+                            document.getElementById('itstore').style.display = 'inline';
+                            document.getElementById('tourweb').style.display = 'none';
+                            document.getElementById('minijavascript').style.display = 'none';
+                            document.getElementById('mobileapp').style.display = 'none';
+                            document.getElementById('studentsystem').style.display = 'none';
+
+
+                        }else if(e.target.id === "second"){
+
+                            document.getElementById('itstore').style.display = 'none';
+                            document.getElementById('tourweb').style.display = 'inline';
+                            document.getElementById('minijavascript').style.display = 'none';
+                            document.getElementById('mobileapp').style.display = 'none';
+                            document.getElementById('studentsystem').style.display = 'none';
+
+                        }else if(e.target.id === "third"){
+
+                            document.getElementById('itstore').style.display = 'none';
+                            document.getElementById('tourweb').style.display = 'none';
+                            document.getElementById('minijavascript').style.display = 'inline';
+                            document.getElementById('mobileapp').style.display = 'none';
+                            document.getElementById('studentsystem').style.display = 'none';
+
+                        }
+                        else if(e.target.id === "fourth"){
+
+                            document.getElementById('itstore').style.display = 'none';
+                            document.getElementById('tourweb').style.display = 'none';
+                            document.getElementById('minijavascript').style.display = 'none';
+                            document.getElementById('mobileapp').style.display = 'inline';
+                            document.getElementById('studentsystem').style.display = 'none';
+
+                        }
+                        else if(e.target.id === "fifth"){
+
+                            document.getElementById('itstore').style.display = 'none';
+                            document.getElementById('tourweb').style.display = 'none';
+                            document.getElementById('minijavascript').style.display = 'none';
+                            document.getElementById('mobileapp').style.display = 'none';
+                            document.getElementById('studentsystem').style.display = 'inline';
+
+                        }
+                    }
+                }
+
+              
+            </script>
+
+            <div class="mix prt-card first" id="itstore" style="display:none;">
+                <br>
+
+                <p class="text">
+                    Interactive Applications done using
+                    Python and R.
+                </p>
+
+                <div class="scroll-arrow" id="scroll-left">
+                    &#8592;
+                </div>
+
+                <ul id="imgList" class="ul-image">
+                    <li class="li-image">
+                        <img src="./assets/ITWeb2.jpeg"/>
+                    </li>
+
+                    <li class="li-image">
+                        <img src="./assets/ITWeb1.jpeg"/>
+                    </li>   
+                    
+                    <li class="li-image">
+                        <img src="./assets/ITWeb3.jpeg"/>
+                    </li>   
+
+                    <li class="li-image">
+                        <img src="./assets/ITWeb4.jpeg"/>
+                    </li> 
+
+                    <li class="li-image">
+                        <img src="./assets/ITWeb5.jpeg"/>
+                    </li> 
+                </ul>
+
+                <div class="scroll-arrow" id="scroll-right" onclick="scrollRight()">
+                    &#8594;
+                </div>
+
+            </div>
+
+            <div class="mix prt-card second" id="tourweb" style="display:none;">
+                
+                <p class="text">
+                    A Project that uses Various SQL Queries. 
+                </p>
+
+                <div class="scroll-arrow" id="scroll-left2">
+                    &#8592;
+                </div>
+
+                <ul id="imgList2" class="ul-image">
+                    <li class="li-image">
+                        <img src="./assets/TourWeb2.jpeg"/>
+                    </li>
+
+                    <li class="li-image">
+                        <img src="./assets/TourWeb1.jpeg"/>
+                    </li>
+
+                    <li class="li-image">
+                        <img src="./assets/TourWeb3.jpeg"/>
+                    </li>
+
+                </ul>
+
+                <div class="scroll-arrow" id="scroll-right2" onclick="scrollRight2()">
+                    &#8594;
+                </div>
+
+            </div>
+
+
+            <div class="mix prt-card third" id="minijavascript" style="display:none;">
+                
+                <p class="text">
+                    A Machine Learning Project done using 
+                    Python.
+                </p>
+
+                <div class="scroll-arrow" id="scroll-left3">
+                    &#8592;
+                </div>
+
+                <ul id="imgList3" class="ul-image">
+                    <li class="li-image">
+                        <img src="./assets/MiniRes.jpeg"/>
+                    </li>
+
+                    <li class="li-image">
+                        <img src="./assets/MiniRes1.jpeg"/>
+                    </li>
+
+                    <li class="li-image">
+                        <img src="./assets/MiniRes2.jpeg"/>
+                    </li>
+
+                </ul>
+
+                <div class="scroll-arrow" id="scroll-right3" onclick="scrollRight3()">
+                    &#8594;
+                </div>
+
+            </div>
+
+
+            <div class="mix prt-card fourth" id="mobileapp" style="display:none;">
+                
+                <p class="text">
+                    An Interactive Dashboard done using
+                    ableau.
+                </p>
+
+                <div class="scroll-arrow" id="scroll-left4">
+                    &#8592;
+                </div>
+
+                <ul id="imgList4" class="ul-image">
+                    <li class="li-image">
+                        <img src="./assets/mobileapp1.jpeg"/>
+                    </li>
+
+                    <li class="li-image">
+                        <img src="./assets/mobileapp2.jpeg"/>
+                    </li>
+
+                    <li class="li-image">
+                        <img src="./assets/mobileapp3.jpeg"/>
+                    </li>
+                </ul>
+
+                <div class="scroll-arrow" id="scroll-right4" onclick="scrollRight4()">
+                    &#8594;
+                </div>
+
+            </div>
+
+            <div class="mix prt-card fifth" id="studentsystem" style="display:none;">
+                
+                <p class="text">
+                    A Project that uses Various 
+                    NOSQL Queries
+                </p>
+
+                <div class="scroll-arrow" id="scroll-left5">
+                    &#8592;
+                </div>
+
+                <ul id="imgList5" class="ul-image">
+                    <li class="li-image">
+                        <img src="./assets/studentSystem.jpeg"/>
+                    </li>
+
+                    <li class="li-image">
+                        <img src="./assets/studentSystem1.jpeg"/>
+                    </li>
+
+                </ul>
+
+                <div class="scroll-arrow" id="scroll-right5" onclick="scrollRight5()">
+                    &#8594;
+                </div>
+
+            </div>
+
+        </section>
+
+        <br><br><br>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact-info">
+                    <h3 class="sub-heading">Contact Me</h3>
+                    <h3 class="heading">Thank You</h3>
+                    <p class="text">
+                        Thanking you for taking the time to look through my portfolio.
+                        Feel free to connect with me on Linkedin or contact me through my email.
+                    </p>
+                    <a href="mailto:raysam286@gmail.com" class="mail">
+                        raysam286@gmail.com
+                        <i class="uil uil-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="landscape">
+                   <img src="./assets/792000.png" class="thank"alt="">
+                </div>
+            </div>
+        </section>
+        <br><br>
+
+    </main>
+
+    <!--JavaScript Files-->
+    <script src="./js/mixitup.min.js"></script>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/image.js"></script>
+</body>
+</html>
